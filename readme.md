@@ -23,6 +23,11 @@ capabilities example:
 }
 
 
+Listar los dispositivos (emuladores)
+```
+adb devices
+```
+
 list all packages from the device
 ```
 adb shell pm list packages

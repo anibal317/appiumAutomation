@@ -5,7 +5,7 @@ export const config = {
     // ====================
     // WebdriverIO supports running e2e tests as well as unit and component tests.
     runner: 'local',
-    port: 4723,
+    port: 4724,
     //
     // ==================
     // Specify Test Files
@@ -54,7 +54,7 @@ export const config = {
         // capabilities for local Appium web tests on an Android Emulator
         platformName: 'Android',
         // browserName: 'chrome',
-        'appium:deviceName': 'device', // Nombre de tu emulador
+        'appium:deviceName': 'test1', // Nombre de tu emulador
         'appium:automationName': 'UiAutomator2',
         'appium:appPackage': 'com.android.settings',
         'appium:appActivity': '.Settings',
@@ -145,7 +145,7 @@ export const config = {
         //         color: true,
         //     }]
         ['allure', {
-            outputDir: 'allure-results',
+            // outputDir: 'allure-results',
             // disableWebdriverStepsReporting: true,
             // disableWebdriverScreenshotsReporting: true,
         }]

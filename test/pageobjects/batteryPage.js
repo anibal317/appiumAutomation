@@ -1,7 +1,7 @@
 import { $ } from '@wdio/globals';
 
 class BatteryPage {
-   async openBatterySettings() {
+    async openBatterySettings() {
         const batteryOption = await $('(//android.widget.RelativeLayout[@resource-id="com.android.settings:id/text_frame"])[5]');
         await batteryOption.waitForDisplayed({ timeout: 5000 });
         return batteryOption.click();
@@ -17,6 +17,11 @@ class BatteryPage {
         const batterySaver = await $('//android.widget.TextView[@text="Battery Saver" or @text="Ahorro de batería"]');
         await batterySaver.waitForDisplayed({ timeout: 5000 });
         return batterySaver.click();
+    }
+    async backBtn() {
+        const backBtn = await $('//android.widget.ImageButton[@content-desc="Navigate up"]')
+        await backBtn.waitForDisplayed({timeout:2000})
+        return backBtn.click()
     }
 }
 

@@ -16,9 +16,9 @@
     "appium-uiautomator2-driver": "^3.8.0"
   },
   "scripts": {
-    "wdio": "wdio run ./wdio.conf.js",
+    "wdio": "wdio run ./wdio.conf.js --spec ./test/specs/testAllure.e2e.js && npm run report" ,
     "test": "npx wdio run --import wdio.conf.js --watch",
     "server": "appium",
-    "report":"allure generate allure-results && allure open"
+    "report":"allure generate  --clean  && allure open"
   }
 }
